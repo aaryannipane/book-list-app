@@ -68,7 +68,7 @@ class Store {
         if(localStorage.getItem('books') === null){
             books = [];
         }else{
-            // convert the string data from loacl storage to json object 
+            // convert the JSON data from local storage to javascript object 
             books = JSON.parse(localStorage.getItem('books')); 
         }
 
@@ -81,6 +81,7 @@ class Store {
 
         books.push(book); // push method is used to push element into an array at the end
 
+        // json.stringify is used to convert javascript object to json object
         localStorage.setItem('books', JSON.stringify(books))
     }
 
